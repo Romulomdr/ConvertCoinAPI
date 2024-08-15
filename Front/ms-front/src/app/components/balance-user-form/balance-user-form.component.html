@@ -1,0 +1,24 @@
+<div class="div-form d-flex flex-column align-items-center">
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Balance</th>
+        <th>Exchanges</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.userId }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.moeda }}</td>
+        <td>{{ user.saldo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="button-depositar">
+  <div></div>
+  <button (click)="goToLogin()"> Login </button>
+</div>

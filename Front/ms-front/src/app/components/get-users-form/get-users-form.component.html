@@ -1,0 +1,28 @@
+<div class="user-table-container div-table">
+  <main class="m-auto form-container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Moeda</th>
+          <th>Saldo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.moeda }}</td>
+          <td>{{ user.saldo }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</div>
+
+<div class="d-inline-flex justify-content-end mb-3 float-end">
+  <button type="button" class="btn btn-primary mr-2"> Depositar </button>
+  <div></div>
+  <button type="button" class="btn btn-primary ms-5" (click)="goToLogin()"> Login </button>
+</div>

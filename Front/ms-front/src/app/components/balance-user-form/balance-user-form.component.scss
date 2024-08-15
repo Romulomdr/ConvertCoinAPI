@@ -1,0 +1,46 @@
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #d6d6d6;
+}
+
+.button-depositar{
+  margin-right: 90%;
+
+}
+.button-depositar button{
+  border-radius: 10px;
+  transition: ease-in-out 0.5s;
+}
+.button-depositar button:hover{
+  background-color: #629ed6;
+}
+
+

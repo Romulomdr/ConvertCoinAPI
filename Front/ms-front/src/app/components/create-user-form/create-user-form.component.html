@@ -1,0 +1,36 @@
+<div class="div-form d-flex flex-column align-items-center">
+  <main class="w-100 m-auto form-container">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+
+      <label for="name">Name:</label>
+      <div>
+        <input class="form-control" type="text" id="name" name="name" [(ngModel)]="user.name" required>
+      </div>
+
+      <label for="email">Email:</label>
+      <div class="mb-3">
+        <input class="form-control" placeholder="name@example.com" type="email" id="email" name="email" [(ngModel)]="user.email" required>
+      </div>
+
+      <label for="currency">Currency:</label>
+      <div class="input-group mb-3">
+        <input class="form-control" type="text" id="currency" name="currency" [(ngModel)]="user.moeda" required>
+        <span class="input-group-text" id="basic-addon2">Exemplo USD-BRL</span>
+      </div>
+
+      <span for="Balance">Balance:</span>
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input class="form-control" id="Balance" name="Balance" [(ngModel)]="user.saldo" required>
+      </div>
+
+      <div>
+        <button type="button" class="btn btn-primary px-5" type="submit" [disabled]="!userForm.form.valid">Register</button>
+      </div>
+      <div class="d-flex flex-column justify-content-end mb-3 float-end">
+        <button type="button" class="btn btn-primary mb-2" (click)="goToBalance()"> Balance </button>
+        <button type="button" class="btn btn-primary" (click)="goToRegisteredUsers()"> Registered Users </button>
+      </div>
+    </form>
+  </main>
+</div>
