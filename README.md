@@ -1,6 +1,4 @@
-# ✔ ConvertCoinAPI
-
-# 🧮 API to convert currency
+# 📊 API to convert currency
 - 
 
 ## 📈 Roadmap
