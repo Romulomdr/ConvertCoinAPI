@@ -1,6 +1,13 @@
 # 📊 API to convert currency
 - This microservice allows users to register with information such as name, email, preferred currency (USD, EUR, etc.) and balance in reais (BRL). After registration, the system converts the balance into the currency chosen by the user using an external exchange API. An email is then sent to the user containing the converted balance in the specified currencies.
 
+## To start
+- 1º Install Java
+- 2º Install PostgreSQL
+- 3º Install Postman or other.
+- 4º Install IDE Spring Tools Suite
+- 5º Import project and run.
+
 ## 📈 Roadmap
 - 1º Flow organization and class diagram.
 - 2º Creating the project using Spring Initializr and adding the necessary dependencies.
