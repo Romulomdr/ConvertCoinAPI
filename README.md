@@ -1,16 +1,23 @@
 # 📊 API to convert currency
-- 
+- This microservice allows users to register with information such as name, email, preferred currency (USD, EUR, etc.) and balance in reais (BRL). After registration, the system converts the balance into the currency chosen by the user using an external exchange API. An email is then sent to the user containing the converted balance in the specified currencies.
 
 ## 📈 Roadmap
-- 
+- 1º Flow organization and class diagram.
+- 2º Creating the project using Spring Initializr and adding the necessary dependencies.
+- 3º Creation of the user microservice.
+- 4º Creation of the email microservice.
+- 5º RabbitMQ configuration.
+- 6º Google SMTP configuration.
+- 7º Consumption of the external API for currency conversion.
 
 ## 🚀 Features
-
-- 
+- Create and save the user, and then send the email.
+- Deposit to the user's balance.
+- Get all users.
   
-## 📋 Diagrama de Classe
-- 
+## 📋 Class Diagram
+![ConvertCoinAPI drawio](https://github.com/user-attachments/assets/57ca33a7-b2c7-4aad-a4f1-00d2a2923484)
 
-## 🚦 Fluxograma
-
--
+## 🚦 Flowchart
+- This is the main flow of microservices where user creation occurs, communication between services using the broker (RabbitMQ), consumption of the external API, sending the email and all data is saved in PostgreSQL.
+![Flowchart Create User](https://github.com/user-attachments/assets/4b88f3ee-89c2-4bc3-a89a-14aa794f8fe6)
