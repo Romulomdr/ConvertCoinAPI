@@ -39,4 +39,4 @@
 
 ## ✒️ Autor
 
-* [**Romulo Matheus**](https://github.com/Romulomdr) - *At the moment developer Java back-end and support in Moodle environments* [<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/romulo-dantasmdr/)
+* [**Romulo Matheus**](https://github.com/Romulomdr) - *At the moment developer Java back-end* [<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/romulo-dantasmdr/)
