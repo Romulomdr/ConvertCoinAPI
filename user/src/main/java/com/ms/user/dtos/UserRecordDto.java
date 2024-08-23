@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotEmpty;
 
 public record UserRecordDto(@NotBlank String name, 
 							@NotBlank @Email String email,
-							@NotEmpty String moeda,
-							Double saldo) {
+							@NotEmpty String coin,
+							Double balance) {
 	
 }

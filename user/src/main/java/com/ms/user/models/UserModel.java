@@ -20,8 +20,8 @@ public class UserModel implements Serializable {
 	private UUID userId;
 	private String name;
 	private String email;
-	private String moeda;
-	private Double saldo;
+	private String coin;
+	private Double balance;
 	
 	public UUID getUserId() {
 		return userId;
@@ -41,17 +41,17 @@ public class UserModel implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getMoeda() {
-		return moeda;
+	public String getCoin() {
+		return coin;
 	}
-	public void setMoeda(String moeda) {
-		this.moeda = moeda;
+	public void setCoin(String coin) {
+		this.coin = coin;
 	}
-	public Double getSaldo() {
-		return saldo;
+	public Double getBalance() {
+		return balance;
 	}
-	public void setSaldo(Double saldo) {
-		this.saldo = saldo;
+	public void setBalance(Double balance) {
+		this.balance = balance;
 	}
 	
 	

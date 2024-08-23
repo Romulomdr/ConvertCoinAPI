@@ -46,18 +46,18 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
     
-    public ResponseEntity<UserModel> depositar(String email, Double saldo) {
+    public ResponseEntity<UserModel> depositar(String email, Double balance) {
         Optional<UserModel> optionalUser = getUserByEmail(email);
         
-        Double saldoAnterior = optionalUser.get().getSaldo();
+        Double saldoAnterior = optionalUser.get().getBalance();
         
         if (optionalUser.isPresent()) {
             UserModel user = optionalUser.get();
             
             if(saldoAnterior == null) {
-            	user.setSaldo(saldo);
+            	user.setBalance(balance);
             }else {
-            	user.setSaldo(saldo + saldoAnterior);
+            	user.setBalance(balance + saldoAnterior);
             }
  
             userRepository.save(user);
@@ -70,8 +70,8 @@ public class UserService {
     public String converterMoeda(String email) {
         Optional<UserModel> optionalUser = getUserByEmail(email);
         
-        if (optionalUser.isPresent() && optionalUser.get().getMoeda() != null && !optionalUser.get().getMoeda().isEmpty()) {
-            String[] moedas = optionalUser.get().getMoeda().split(",");
+        if (optionalUser.isPresent() && optionalUser.get().getCoin() != null && !optionalUser.get().getCoin().isEmpty()) {
+            String[] moedas = optionalUser.get().getCoin().split(",");
             StringBuilder sb = new StringBuilder();
             
             for (String moeda : moedas) {
@@ -80,7 +80,7 @@ public class UserService {
                 if (cotacoes != null && cotacoes.length > 0) {
                     CotacaoDto cotacao = cotacoes[0];
                     double high = Double.parseDouble(cotacao.getHigh());
-                    double novoSaldo = optionalUser.get().getSaldo() / high;
+                    double novoSaldo = optionalUser.get().getBalance() / high;
                     sb.append(String.format("\n Saldo em %s: %.2f", moeda, novoSaldo));
                 }
             }

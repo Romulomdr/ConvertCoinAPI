@@ -43,18 +43,18 @@ public class UserController {
     }
 	
     @GetMapping("/email/{email}")
-    public ResponseEntity<UserModel> getUserByEmail(@PathVariable("email") String email) {
+    public ResponseEntity<UserModel> getUserByEmail(@PathVariable String email) {
         Optional<UserModel> user = userService.getUserByEmail(email);
         return user.map(ResponseEntity::ok)
                    .orElseGet(() -> ResponseEntity.notFound().build());
     }
     @PostMapping("/depositar/{email}/{saldo}")
-    public ResponseEntity<UserModel> updateSaldo(@PathVariable("email") String email, @PathVariable("saldo") Double saldo) {
+    public ResponseEntity<UserModel> updateSaldo(@PathVariable String email, @PathVariable Double saldo) {
     	return userService.depositar(email, saldo);
     }
     
     @GetMapping("/conversao/{email}")
-    public void conversao(@PathVariable("email") String email){
+    public void conversao(@PathVariable String email){
     	userService.converterMoeda(email);
     }
     

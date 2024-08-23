@@ -22,8 +22,8 @@ public class UserProducer {
 		emailDto.setUserId(userModel.getUserId());
 		emailDto.setEmailTo(userModel.getEmail());
 		emailDto.setSubject("Cadastro Realizado com Sucesso!");
-		emailDto.setText(userModel.getName() + ", Seja Bem vindo(a)! \n Agradecemos o seu cadastro, Seu saldo é de: "+"R$ "+ userModel.getSaldo() + 
-				"\n Suas moedas escolhidas foram: " + userModel.getMoeda() + "\n Abaixo segue seu saldo nas moedas escolhidas com base na cotação atual: "+ cotacoes +
+		emailDto.setText(userModel.getName() + ", Seja Bem vindo(a)! \n Agradecemos o seu cadastro, Seu saldo é de: "+"R$ "+ userModel.getBalance() + 
+				"\n Suas moedas escolhidas foram: " + userModel.getCoin() + "\n Abaixo segue seu saldo nas moedas escolhidas com base na cotação atual: "+ cotacoes +
 				"\n Em breve recebera uma planilha com tendências, agradecemos a compreensão."
 				);
 		

@@ -25,13 +25,13 @@ public class ConsultaCotacao {
 	UserService userService;
 	
     @GetMapping("{email}")
-    public List<CotacaoDto> consultaCotacao(@PathVariable("email") String email) {
+    public List<CotacaoDto> consultaCotacao(@PathVariable String email) {
     	
         RestTemplate restTemplate = new RestTemplate();
         
         UserModel user = userService.getUserByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
         
-        String url = String.format("https://economia.awesomeapi.com.br/json/%s", user.getMoeda());
+        String url = String.format("https://economia.awesomeapi.com.br/json/%s", user.getCoin());
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
         ObjectMapper objectMapper = new ObjectMapper();
