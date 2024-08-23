@@ -33,7 +33,7 @@ public class UserService {
 	public UserModel save(UserModel userModel) {
 		
 		userModel = userRepository.save(userModel);
-		String cotacoes = converterMoeda(userModel.getEmail()).toString();
+		String cotacoes = convertCoin(userModel.getEmail()).toString();
 		userProducer.publishMessageEmail(userModel, cotacoes);
 		
 		return userModel;
@@ -67,7 +67,7 @@ public class UserService {
         }
     }
     
-    public String converterMoeda(String email) {
+    public String convertCoin(String email) {
         Optional<UserModel> optionalUser = getUserByEmail(email);
         
         if (optionalUser.isPresent() && optionalUser.get().getCoin() != null && !optionalUser.get().getCoin().isEmpty()) {

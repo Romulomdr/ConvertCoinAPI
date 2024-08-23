@@ -48,15 +48,9 @@ public class UserController {
         return user.map(ResponseEntity::ok)
                    .orElseGet(() -> ResponseEntity.notFound().build());
     }
-    @PostMapping("/depositar/{email}/{saldo}")
-    public ResponseEntity<UserModel> updateSaldo(@PathVariable String email, @PathVariable Double saldo) {
-    	return userService.depositar(email, saldo);
+    @PostMapping("/deposit/{email}/{balance}")
+    public ResponseEntity<UserModel> updateSaldo(@PathVariable String email, @PathVariable Double balance) {
+    	return userService.depositar(email, balance);
     }
-    
-    @GetMapping("/conversao/{email}")
-    public void conversao(@PathVariable String email){
-    	userService.converterMoeda(email);
-    }
-    
     
 }
