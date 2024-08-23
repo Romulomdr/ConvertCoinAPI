@@ -21,3 +21,11 @@
 ## 🚦 Flowchart
 - This is the main flow of microservices where user creation occurs, communication between services using the broker (RabbitMQ), consumption of the external API, sending the email and all data is saved in PostgreSQL.
 ![Flowchart Create User](https://github.com/user-attachments/assets/4b88f3ee-89c2-4bc3-a89a-14aa794f8fe6)
+
+## 🔗 Routes
+- POST /users -> Create user
+  
+![Create User](https://github.com/user-attachments/assets/95650414-5ac1-436d-8b58-a71260cbdd52)
+- GET /users -> Get all users
+- GET /email/{email} -> Get user by e-mail
+- POST /deposit/{email}/{balance} -> Deposit money to a client
